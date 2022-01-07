@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import React, { useState } from 'react'
+import Keyboard from './components/keyboard/Keyboard';
+import Monitor from './components/monitor/Monitor';
+export const dataContext = React.createContext()
 
 function App() {
+
+  const [mainText, setMainText] = useState()
+  const [subText, setSubText] = useState()
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <dataContext.Provider value={{setMainText, setSubText}}>
+        <Monitor mainText={mainText} subText={subText} />
+        <Keyboard />
+      </dataContext.Provider>
     </div>
   );
 }

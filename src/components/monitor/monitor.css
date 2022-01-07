@@ -1,0 +1,22 @@
+.monitor {
+    height: 22vh;
+    max-height: 160px;
+    /* border: 1px solid green; */
+    margin: 20px 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.monitor .main-text {
+    text-align: right;
+    font-size: 50px;
+    margin: 0;
+}
+
+.monitor .sub-text {
+    margin: 0;
+    color: #6a6a75;
+}

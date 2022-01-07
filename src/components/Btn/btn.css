@@ -1,0 +1,29 @@
+button.btn {
+    box-shadow: 3px 5px 15px #000000;
+    border-radius: 7px;
+    border: none;
+    color: #777;
+    font-size: 22px;
+    background-color: transparent;
+    transition: .3s;
+}
+
+button.colorBtn {
+    color: orange;
+}
+
+button.equal {
+    grid-column: 3/ span 2;
+    background-color: #fa7900;
+    color: #ccc;
+}
+
+button.btn:focus {
+    color: red;
+    box-shadow: 0px 0px 10px #000000;
+    outline: none;
+}
+
+button.equal:focus {
+    color: #fff;
+}
